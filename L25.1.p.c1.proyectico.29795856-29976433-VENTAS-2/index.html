@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <section id="VentaForm">
+      <h3>Datos de la venta</h3>
+      <input type="text" id="VentaForm_incliente" placeholder="cliente"></input>
+      <input type="text" id="VentaForm_inFactura" placeholder="Factura"></input>
+      <input type="text" id="VentaForm_inCosto" placeholder="Costo"></input>
+      <input type="text" id="VentaForm_inCantidadArt" placeholder="Cantidad"></input>
+      <button id="VentaForm_btProcesar">Procesar</button> 
+    </section>
+    <section id="mainForm">
+      <h3>Info de Ventas</h3>
+      <p>Monto total en caja: 
+        $<span id="mainForm_lbltotalencaja">?</span>
+      </p>
+      <p>Cliente que pago el monto mayor: 
+        <span id="mainForm_lblClienteMayor">?</span>
+      </p>
+      <p>Cantidad de clientes que llevaron 1 articulo: 
+        <span id="mainForm_lblclientecon1Articulo">?</span>
+      </p>
+    </section>
+  </body>
+    <script type="module">
+      import Cl_principal from "./js/principal.js";
+      new Cl_principal()
+    </script>
+</html>
