@@ -12,6 +12,8 @@ export default class Cl_vTienda {
         "mainForm_lblClienteMayor");
       this.lblclientecon1Articulo = document.getElementById(
       "mainForm_lblclientecon1Articulo");
+      this.lblTablaVentas = document.getElementById(
+        "mainForm_lblTablaVentas");
     
     this.vVenta.btProcesar.onclick = () =>
         this.controlador.procesarVentas();
@@ -31,6 +33,16 @@ reportarVentas(
     clientecon1Articulo
 
 ){
+  this.lblTablaVentas.innerHTML +=`
+    <tabale>
+      <tr>
+        <td>${this.mVenta.cliente}</td>
+        <td>${this.mVenta.factura}</td>
+        <td>${this.mVenta.costo}</td>
+        <td>${this.mVenta.cnarticulos}</td>
+      </tr>
+    </tabale>`
+
     this.lbltotalencaja.innerHTML = totalencaja;
     this.lblClienteMayor.innerHTML = clienteMayor;
     this.lblclientecon1Articulo.innerHTML = clientecon1Articulo;
